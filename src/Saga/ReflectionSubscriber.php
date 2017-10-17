@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core\Saga;
 
@@ -84,8 +84,7 @@ class ReflectionSubscriber implements Subscriber
      */
     private function passMethodRequirements(\ReflectionMethod $method): bool
     {
-        if (
-            $method->isConstructor() ||
+        if ($method->isConstructor() ||
             $method->isDestructor() ||
             $method->isAbstract()
         ) {

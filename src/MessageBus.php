@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core;
 
@@ -43,7 +43,7 @@ class MessageBus
      *
      * @return Task
      */
-    public function handle($message, Context $context): Task
+    public function handle(object $message, Context $context): Task
     {
         Guard::message($message);
 

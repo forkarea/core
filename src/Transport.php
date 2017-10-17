@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core;
 
@@ -19,12 +19,11 @@ use PHPinnacle\System\Task;
 interface Transport
 {
     /**
-     * @param string          $destination
      * @param OutgoingMessage $message
      *
      * @return Task
      */
-    public function send(string $destination, OutgoingMessage $message): Task;
+    public function send(OutgoingMessage $message): Task;
 
     /**
      * @return IncomingMessage

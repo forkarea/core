@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core;
 
@@ -23,7 +23,7 @@ interface Context extends Registry
      *
      * @return Task
      */
-    public function send($message, Options\SendOptions $options): Task;
+    public function send(object $message, Options\SendOptions $options): Task;
 
     /**
      * @param object               $message
@@ -31,7 +31,7 @@ interface Context extends Registry
      *
      * @return Task
      */
-    public function reply($message, Options\ReplyOptions $options): Task;
+    public function reply(object $message, Options\ReplyOptions $options): Task;
 
     /**
      * @param object               $message
@@ -39,5 +39,5 @@ interface Context extends Registry
      *
      * @return Task
      */
-    public function delay($message, Options\DelayOptions $options): Task;
+    public function delay(object $message, Options\DelayOptions $options): Task;
 }

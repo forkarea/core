@@ -8,11 +8,10 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace PHPinnacle\Core\Resolver;
+namespace PHPinnacle\Core\Convention;
 
-use PHPinnacle\Core\Message;
 use PHPinnacle\Core\Convention;
 
 class InterfaceConvention implements Convention
@@ -20,16 +19,16 @@ class InterfaceConvention implements Convention
     /**
      * {@inheritdoc}
      */
-    public function isCommand($message): bool
+    public function isCommand(object $message): bool
     {
-        return $message instanceof Message\Command;
+        return $message instanceof Command;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function isEvent($message): bool
+    public function isEvent(object $message): bool
     {
-        return $message instanceof Message\Event;
+        return $message instanceof Event;
     }
 }

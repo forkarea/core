@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core;
 
@@ -21,13 +21,9 @@ final class Guard
      *
      * @throws Exception\MessageInvalid
      */
-    public static function message($value): void
+    public static function message(object $value): void
     {
-        if (
-            false === \is_object($value) ||
-            $value instanceof \Closure ||
-            $value instanceof \Generator
-        ) {
+        if ($value instanceof \Closure || $value instanceof \Generator) {
             throw new Exception\MessageInvalid($value);
         };
     }

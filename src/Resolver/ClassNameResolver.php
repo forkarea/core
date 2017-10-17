@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core\Resolver;
 
@@ -33,7 +33,7 @@ class ClassNameResolver implements HandlerResolver
     /**
      * {@inheritdoc}
      */
-    public function resolve($message, Context $context): callable
+    public function resolve(object $message, Context $context): callable
     {
         return $this->handlers[\get_class($message)];
     }

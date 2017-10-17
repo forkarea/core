@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core;
 
@@ -19,12 +19,12 @@ interface Convention
      *
      * @return bool
      */
-    public function isCommand($message): bool;
+    public function isCommand(object $message): bool;
 
     /**
      * @param object $message
      *
      * @return bool
      */
-    public function isEvent($message): bool;
+    public function isEvent(object $message): bool;
 }

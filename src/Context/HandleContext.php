@@ -8,35 +8,30 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace PHPinnacle\Core\Context;
 
 use PHPinnacle\Core\Context;
 use PHPinnacle\Core\Options;
+use PHPinnacle\Core\Transport;
 use PHPinnacle\System\Task;
 use PHPinnacle\System\TaskScheduler;
 
 class HandleContext implements Context
 {
     /**
-    /**
      * @var Context
      */
     private $context;
-    /**
-     * @var TaskScheduler
-     */
-    private $scheduler;
 
     /**
      * @param TaskScheduler $scheduler
      * @param Context       $context
      */
-    public function __construct(TaskScheduler $scheduler, Context $context)
+    public function __construct(Transport $transport, RootContext $context)
     {
-        $this->context   = $context;
-        $this->scheduler = $scheduler;
+        $this->context = $context;
     }
 
     /**
@@ -58,24 +53,21 @@ class HandleContext implements Context
     /**
      * {@inheritdoc}
      */
-    public function send($message, Options\SendOptions $options): Task
+    public function send(object $message, Options\SendOptions $options): Task
     {
-
     }
 
     /**
      * {@inheritdoc}
      */
-    public function reply($message, Options\ReplyOptions $options): Task
+    public function reply(object $message, Options\ReplyOptions $options): Task
     {
-
     }
 
     /**
      * {@inheritdoc}
      */
-    public function delay($message, Options\DelayOptions $options): Task
+    public function delay(object $message, Options\DelayOptions $options): Task
     {
-
     }
 }

@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-namespace PHPinnacle\Core\Transport;
+namespace PHPinnacle\Core\Message;
 
 abstract class AbstractMessage
 {
